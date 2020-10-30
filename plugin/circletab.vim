@@ -3,20 +3,14 @@
 " two different approaches but it is not required you use VimL. Feel free to
 " delete this code and proceed without it.
 
-echo "Starting the example Python Plugin"
-
 command! TabRollBack call RollBackTab()
 
-function DoItVimL()
-    echo "DoItVimL"
-endfunction
-
-augroup NvimTabRollBack
-    au!
-    " au TabEnter * call GdbHandleEvent("on_tab_enter")
-    au TabLeave * call GdbHandleEvent("on_tab_leave")
-    " au BufEnter * call GdbHandleEvent("on_buf_enter")
-    " au BufLeave * call GdbHandleEvent("on_buf_leave")
-    " au TabClosed * call GdbHandleTabClosed()
-    " au VimLeavePre * call GdbHandleVimLeavePre()
-augroup END
+" augroup NvimTabRollBack
+"     au!
+"     " au TabEnter * call GdbHandleEvent("on_tab_enter")
+"     au TabLeave * call GdbHandleEvent("on_tab_leave")
+"     " au BufEnter * call GdbHandleEvent("on_buf_enter")
+"     " au BufLeave * call GdbHandleEvent("on_buf_leave")
+"     " au TabClosed * call GdbHandleTabClosed()
+"     " au VimLeavePre * call GdbHandleVimLeavePre()
+" augroup END
